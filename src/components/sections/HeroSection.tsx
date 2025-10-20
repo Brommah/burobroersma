@@ -22,7 +22,7 @@ const HeroSection = () => {
           <div className="space-y-8">
             {/* Headline */}
             <div>
-              <h1 className="text-[16vw] leading-[1.05] sm:text-6xl lg:text-7xl xl:text-8xl font-heavy text-base mb-4 sm:mb-6">
+              <h1 className="text-[20vw] leading-[1.05] sm:text-6xl lg:text-7xl xl:text-8xl font-heavy text-base mb-4 sm:mb-6">
                 <span className="text-accent">
                   <span className="block sm:inline">Rekenkracht</span>
                   <span className="hidden sm:inline"> + </span>
