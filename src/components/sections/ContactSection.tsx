@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Train, Car, Video, CheckCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Train, Car, CheckCircle } from 'lucide-react';
 
 const ContactSection = () => {
   return (
