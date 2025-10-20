@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { Phone, Mail, FileText } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 
 interface LeadEngineer {
   name: string;
@@ -50,8 +49,8 @@ const TeamOverview = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-1 mb-12 sm:mb-16">
-          {leadEngineers.map((engineer, index) => (
-            <LeadEngineerCard key={engineer.name} engineer={engineer} index={index} />
+          {leadEngineers.map((engineer) => (
+            <LeadEngineerCard key={engineer.name} engineer={engineer} />
           ))}
         </div>
 
@@ -85,10 +84,9 @@ const TeamOverview = () => {
 
 interface LeadEngineerCardProps {
   engineer: LeadEngineer;
-  index: number;
 }
 
-const LeadEngineerCard = ({ engineer, index }: LeadEngineerCardProps) => {
+const LeadEngineerCard = ({ engineer }: LeadEngineerCardProps) => {
   const photoPath = engineer.name.includes('Andries') 
     ? '/images/team/andries-broersma.png'
     : '/images/team/pim-beekink.png';

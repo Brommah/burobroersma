@@ -5,7 +5,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import ServicesOverview from '@/components/sections/ServicesOverview';
 import FeaturedProjects from '@/components/sections/FeaturedProjects';
 // SocialProof removed (awards/media no longer shown)
-import MethodSafety from '@/components/sections/MethodSafety';
+// MethodSafety removed per request
 import TeamOverview from '@/components/sections/TeamOverview';
 import CareersSection from '@/components/sections/CareersSection';
 import ContactSection from '@/components/sections/ContactSection';

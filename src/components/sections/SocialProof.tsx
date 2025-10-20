@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { Award, ExternalLink, Newspaper } from 'lucide-react';
+import { ExternalLink, Newspaper } from 'lucide-react';
 
 interface ProofProject {
   title: string;
@@ -9,11 +8,6 @@ interface ProofProject {
   image?: string;
 }
 
-interface ProofItem {
-  title: string;
-  year?: string;
-  href?: string;
-}
 
 const projects: ProofProject[] = [
   {
@@ -58,22 +52,6 @@ const projects: ProofProject[] = [
   },
 ];
 
-const awards: ProofItem[] = [
-  { title: 'Nationale Staalprijs (Woningbouw)', year: '2006', href: 'https://e-architect.com' },
-  { title: 'European Aluminium Award', year: '2007', href: 'https://e-architect.com' },
-  { title: 'Belvedere-trofee (VROM)', year: '2007', href: 'https://e-architect.com' },
-  { title: 'ARC13 Architectuurprijs', year: '2013', href: 'https://bustler.net' },
-  { title: 'Nationale Staalprijs (Woningbouw)', year: '2014', href: 'https://nl.wikipedia.org' },
-  { title: 'EU Mies van der Rohe – nominatie', year: '2015', href: 'https://eumiesawards.com' },
-];
-
-const media: ProofItem[] = [
-  { title: 'ArchDaily', href: 'https://www.archdaily.com' },
-  { title: 'Architizer', href: 'https://architizer.com' },
-  { title: 'Bouwen met Staal', href: 'https://www.bouwenmetstaal.nl' },
-  { title: 'Architectenweb', href: 'https://www.architectenweb.nl' },
-  { title: 'Cobouw', href: 'https://www.cobouw.nl' },
-];
 
 const SocialProof = () => {
   return (

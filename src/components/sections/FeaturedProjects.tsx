@@ -64,8 +64,8 @@ const FeaturedProjects = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-1 mb-8 sm:mb-12">
-          {featuredProjects.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} />
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
           ))}
         </div>
 
@@ -85,10 +85,9 @@ const FeaturedProjects = () => {
 
 interface ProjectCardProps {
   project: Project;
-  index: number;
 }
 
-const ProjectCard = ({ project, index }: ProjectCardProps) => {
+const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <article className="group bg-paper border border-neutral-100 hover:border-accent transition-all duration-base overflow-hidden">
       {/* Thumbnail */}
@@ -102,7 +101,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             />
           ) : (
             <img
-              src={`https://source.unsplash.com/featured/800x600?construction,engineering,structure&sig=${index}`}
+              src={`https://source.unsplash.com/featured/800x600?construction,engineering,structure&sig=${Math.random()}`}
               alt={project.title}
               className="w-full h-full object-cover"
             />

@@ -53,7 +53,7 @@ const MethodSafety = () => {
             </div>
 
             <div className="space-y-6 mb-8">
-              {methodPillars.map((pillar, index) => (
+              {methodPillars.map((pillar) => (
                 <div
                   key={pillar.title}
                   className="flex gap-4 p-4 rounded-md hover:bg-accent/5 transition-colors"
@@ -106,7 +106,7 @@ const MethodSafety = () => {
                   { step: '04', title: 'Rapportage', desc: 'Rekennotitie met traceerbare rekenstappen' },
                   { step: '05', title: 'Externe toetsing', desc: 'Onafhankelijke derde toetst ontwerp (indien vereist)' },
                   { step: '06', title: 'Uitvoering & Nazorg', desc: 'Bereikbaar tijdens bouw voor aanpassingsvragen' },
-                ].map((item, idx) => (
+                ].map((item) => (
                   <div
                     key={item.step}
                     className="flex gap-3 sm:gap-4 items-start"

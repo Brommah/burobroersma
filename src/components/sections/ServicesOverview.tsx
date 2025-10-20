@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Grid3x3, Calculator, Wrench, Factory } from 'lucide-react';
+import { ArrowRight, Grid3x3, Calculator } from 'lucide-react';
 
 interface Service {
   title: string;
@@ -46,8 +46,8 @@ const ServicesOverview = () => {
 
         {/* Two Organization Cards */}
         <div className="grid sm:grid-cols-2 gap-1 max-w-4xl">
-          {services.map((service, index) => (
-            <ServiceTile key={service.title} service={service} index={index} />
+          {services.map((service) => (
+            <ServiceTile key={service.title} service={service} />
           ))}
         </div>
       </div>
@@ -57,10 +57,9 @@ const ServicesOverview = () => {
 
 interface ServiceTileProps {
   service: Service;
-  index: number;
 }
 
-const ServiceTile = ({ service, index }: ServiceTileProps) => {
+const ServiceTile = ({ service }: ServiceTileProps) => {
   return (
     <div className="group relative bg-paper border border-neutral-100 p-6 sm:p-8 hover:border-accent transition-all duration-base">
       {/* Icon & Title */}
