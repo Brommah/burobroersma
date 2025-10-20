@@ -22,15 +22,13 @@ const HeroSection = () => {
           <div className="space-y-8">
             {/* Headline */}
             <div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] font-heavy text-base mb-4 sm:mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-heavy text-base mb-6">
                 <span className="text-accent">
-                  <span className="block sm:inline">Rekenkracht</span>
-                  <span className="hidden sm:inline"> + </span>
-                  <span className="block sm:inline">verantwoordelijkheid.</span>
+                  Rekenkracht + verantwoordelijkheid.
                 </span>
               </h1>
               <div 
-                className="inline-block px-3 py-1 border border-accent/30 rounded-sm"
+                className="inline-block px-3 py-1 border border-accent/30 rounded-sm mb-6"
                 style={{
                   background: 'linear-gradient(135deg, #b6966d 0%, #9d7f58 100%)',
                 }}
