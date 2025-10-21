@@ -81,12 +81,18 @@ const Header = () => {
 
             {/* Desktop Links */}
             <div className="hidden lg:flex items-center gap-1">
-              <button
-                onClick={() => scrollToSection('diensten')}
+              <Link
+                href="/ingenieurs"
                 className="px-4 py-2 text-base font-semibold text-base hover:text-accent transition-colors"
               >
-                Diensten
-              </button>
+                Ingenieurs
+              </Link>
+              <Link
+                href="/bouwadvies"
+                className="px-4 py-2 text-base font-semibold text-base hover:text-accent transition-colors"
+              >
+                Bouwadvies
+              </Link>
               <button
                 onClick={() => scrollToSection('projecten')}
                 className="px-4 py-2 text-base font-semibold text-base hover:text-accent transition-colors"
@@ -94,22 +100,10 @@ const Header = () => {
                 Projecten
               </button>
               <button
-                onClick={() => scrollToSection('aanpak')}
-                className="px-4 py-2 text-base font-semibold text-base hover:text-accent transition-colors"
-              >
-                Aanpak
-              </button>
-              <button
                 onClick={() => scrollToSection('team')}
                 className="px-4 py-2 text-base font-semibold text-base hover:text-accent transition-colors"
               >
                 Team
-              </button>
-              <button
-                onClick={() => scrollToSection('carrieres')}
-                className="px-4 py-2 text-base font-semibold text-base hover:text-accent transition-colors"
-              >
-                Carrières
               </button>
               <div className="w-px h-6 bg-neutral-100 mx-2"></div>
               <button
@@ -134,12 +128,20 @@ const Header = () => {
           {isMenuOpen && (
             <div className="lg:hidden py-4 border-t border-neutral-100">
               <div className="space-y-1">
-                <button
-                  onClick={() => scrollToSection('diensten')}
+                <Link
+                  href="/ingenieurs"
+                  onClick={() => setIsMenuOpen(false)}
                   className="w-full text-left px-4 py-3 text-base font-semibold hover:bg-neutral-100 hover:text-accent transition-colors rounded-md"
                 >
-                  Diensten
-                </button>
+                  Ingenieurs
+                </Link>
+                <Link
+                  href="/bouwadvies"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="w-full text-left px-4 py-3 text-base font-semibold hover:bg-neutral-100 hover:text-accent transition-colors rounded-md"
+                >
+                  Bouwadvies
+                </Link>
                 <button
                   onClick={() => scrollToSection('projecten')}
                   className="w-full text-left px-4 py-3 text-base font-semibold hover:bg-neutral-100 hover:text-accent transition-colors rounded-md"
@@ -147,22 +149,10 @@ const Header = () => {
                   Projecten
                 </button>
                 <button
-                  onClick={() => scrollToSection('aanpak')}
-                  className="w-full text-left px-4 py-3 text-base font-semibold hover:bg-neutral-100 hover:text-accent transition-colors rounded-md"
-                >
-                  Aanpak
-                </button>
-                <button
                   onClick={() => scrollToSection('team')}
                   className="w-full text-left px-4 py-3 text-base font-semibold hover:bg-neutral-100 hover:text-accent transition-colors rounded-md"
                 >
                   Team
-                </button>
-                <button
-                  onClick={() => scrollToSection('carrieres')}
-                  className="w-full text-left px-4 py-3 text-base font-semibold hover:bg-neutral-100 hover:text-accent transition-colors rounded-md"
-                >
-                  Carrières
                 </button>
                 <button
                   onClick={() => scrollToSection('contact')}

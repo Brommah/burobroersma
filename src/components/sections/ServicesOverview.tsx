@@ -11,18 +11,18 @@ interface Service {
 
 const services: Service[] = [
   {
-    title: 'Bureau Broersma',
-    valueProp: 'Onafhankelijk ingenieursbureau sinds 1956. We rekenen, modelleren en verifiëren — met verantwoordelijkheid voor veiligheid en uitvoering.',
-    icon: <Grid3x3 className="w-6 h-6" />,
-    process: [],
-    href: '/over',
-  },
-  {
     title: 'Broersma Ingenieurs',
     valueProp: 'Directe lijn met constructeurs en tekenaars. BIM/Revit-first, Eurocode-conform en peer-reviewed ontwerpkeuzes.',
     icon: <Calculator className="w-6 h-6" />,
     process: [],
-    href: '/aanpak-veiligheid',
+    href: '/ingenieurs',
+  },
+  {
+    title: 'Bouwadvies',
+    valueProp: 'Onafhankelijk bouwadvies voor complexe projecten. Van haalbaarheidsstudies tot uitvoeringsbegeleiding en technische ondersteuning.',
+    icon: <Grid3x3 className="w-6 h-6" />,
+    process: [],
+    href: '/bouwadvies',
   },
 ];
 

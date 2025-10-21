@@ -91,8 +91,10 @@ const HeroSection = () => {
           </div>
 
           {/* Right Column - Isometric Structural Detail */}
-          <div className="hidden lg:flex items-center justify-center">
-            <StructuralDetailSVG />
+          <div className="hidden lg:flex items-end justify-end pr-8">
+            <div className="w-full max-w-2xl">
+              <StructuralDetailSVG />
+            </div>
           </div>
         </div>
       </div>
@@ -104,8 +106,8 @@ const HeroSection = () => {
 const StructuralDetailSVG = () => {
   return (
     <svg
-      viewBox="0 0 600 600"
-      className="w-full max-w-lg h-auto"
+      viewBox="0 0 800 700"
+      className="w-full h-auto"
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
@@ -151,28 +153,53 @@ const StructuralDetailSVG = () => {
       </defs>
       
       {/* Background Grid */}
-      <g opacity="0.1">
+      <g opacity="0.08">
         <defs>
-          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0B0D0F" strokeWidth="0.5"/>
+          <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+            <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#0B0D0F" strokeWidth="0.3"/>
           </pattern>
         </defs>
-        <rect width="600" height="600" fill="url(#grid)" />
+        <rect width="800" height="700" fill="url(#grid)" />
       </g>
       
       {/* Foundation */}
       <g>
-        <rect x="50" y="520" width="500" height="80" fill="url(#concreteGradient)" stroke="#0B0D0F" strokeWidth="2" />
-        <rect x="50" y="525" width="500" height="70" fill="url(#rebarPattern)" opacity="0.3" />
+        <rect x="100" y="580" width="600" height="120" fill="url(#concreteGradient)" stroke="#0B0D0F" strokeWidth="2" />
+        <rect x="100" y="585" width="600" height="110" fill="url(#rebarPattern)" opacity="0.3" />
         
         {/* Foundation bolts */}
         <g stroke="url(#brassGradient)" strokeWidth="2" fill="none">
-          <line x1="120" y1="520" x2="120" y2="500" />
-          <line x1="280" y1="520" x2="280" y2="500" />
-          <line x1="440" y1="520" x2="440" y2="500" />
-          <circle cx="120" cy="500" r="3" fill="url(#brassGradient)" />
-          <circle cx="280" cy="500" r="3" fill="url(#brassGradient)" />
-          <circle cx="440" cy="500" r="3" fill="url(#brassGradient)" />
+          <line x1="180" y1="580" x2="180" y2="560" />
+          <line x1="400" y1="580" x2="400" y2="560" />
+          <line x1="620" y1="580" x2="620" y2="560" />
+          <circle cx="180" cy="560" r="4" fill="url(#brassGradient)">
+            <animate attributeName="r" values="4;5;4" dur="2s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="400" cy="560" r="4" fill="url(#brassGradient)">
+            <animate attributeName="r" values="4;5;4" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+          </circle>
+          <circle cx="620" cy="560" r="4" fill="url(#brassGradient)">
+            <animate attributeName="r" values="4;5;4" dur="2s" repeatCount="indefinite" begin="1s"/>
+          </circle>
+        </g>
+        
+        {/* Soil pressure visualization */}
+        <g opacity="0.6">
+          <rect x="100" y="700" width="600" height="20" fill="#8B4513" />
+          <g stroke="#8B4513" strokeWidth="1" fill="none">
+            <line x1="120" y1="700" x2="120" y2="680">
+              <animate attributeName="y2" values="680;675;680" dur="3s" repeatCount="indefinite"/>
+            </line>
+            <line x1="200" y1="700" x2="200" y2="685">
+              <animate attributeName="y2" values="685;680;685" dur="3s" repeatCount="indefinite" begin="0.3s"/>
+            </line>
+            <line x1="400" y1="700" x2="400" y2="675">
+              <animate attributeName="y2" values="675;670;675" dur="3s" repeatCount="indefinite" begin="0.6s"/>
+            </line>
+            <line x1="600" y1="700" x2="600" y2="680">
+              <animate attributeName="y2" values="680;675;680" dur="3s" repeatCount="indefinite" begin="0.9s"/>
+            </line>
+          </g>
         </g>
       </g>
       
@@ -180,39 +207,50 @@ const StructuralDetailSVG = () => {
       <g stroke="#0B0D0F" strokeWidth="3" fill="none">
         {/* Ground Floor Columns */}
         <g fill="url(#steelGradient)">
-          <rect x="95" y="350" width="30" height="150" stroke="#0B0D0F" strokeWidth="2" />
-          <rect x="245" y="300" width="30" height="200" stroke="#0B0D0F" strokeWidth="2" />
-          <rect x="395" y="350" width="30" height="150" stroke="#0B0D0F" strokeWidth="2" />
+          <rect x="145" y="420" width="40" height="160" stroke="#0B0D0F" strokeWidth="2" />
+          <rect x="380" y="360" width="40" height="220" stroke="#0B0D0F" strokeWidth="2" />
+          <rect x="615" y="420" width="40" height="160" stroke="#0B0D0F" strokeWidth="2" />
         </g>
         
         {/* First Floor Columns */}
         <g fill="url(#steelGradient)">
-          <rect x="95" y="200" width="30" height="150" stroke="#0B0D0F" strokeWidth="2" />
-          <rect x="245" y="150" width="30" height="150" stroke="#0B0D0F" strokeWidth="2" />
-          <rect x="395" y="200" width="30" height="150" stroke="#0B0D0F" strokeWidth="2" />
+          <rect x="145" y="260" width="40" height="160" stroke="#0B0D0F" strokeWidth="2" />
+          <rect x="380" y="200" width="40" height="160" stroke="#0B0D0F" strokeWidth="2" />
+          <rect x="615" y="260" width="40" height="160" stroke="#0B0D0F" strokeWidth="2" />
         </g>
         
         {/* Second Floor Columns */}
         <g fill="url(#steelGradient)">
-          <rect x="95" y="50" width="30" height="150" stroke="#0B0D0F" strokeWidth="2" />
-          <rect x="245" y="0" width="30" height="150" stroke="#0B0D0F" strokeWidth="2" />
-          <rect x="395" y="50" width="30" height="150" stroke="#0B0D0F" strokeWidth="2" />
+          <rect x="145" y="100" width="40" height="160" stroke="#0B0D0F" strokeWidth="2" />
+          <rect x="380" y="40" width="40" height="160" stroke="#0B0D0F" strokeWidth="2" />
+          <rect x="615" y="100" width="40" height="160" stroke="#0B0D0F" strokeWidth="2" />
+        </g>
+        
+        {/* Third Floor Columns */}
+        <g fill="url(#steelGradient)">
+          <rect x="145" y="-60" width="40" height="160" stroke="#0B0D0F" strokeWidth="2" />
+          <rect x="380" y="-120" width="40" height="160" stroke="#0B0D0F" strokeWidth="2" />
+          <rect x="615" y="-60" width="40" height="160" stroke="#0B0D0F" strokeWidth="2" />
         </g>
       </g>
       
       {/* Horizontal Beams */}
       <g stroke="#0B0D0F" strokeWidth="2.5" fill="url(#steelGradient)">
         {/* Ground Floor Beams */}
-        <rect x="125" y="320" width="120" height="30" />
-        <rect x="275" y="320" width="120" height="30" />
+        <rect x="185" y="400" width="195" height="40" />
+        <rect x="425" y="400" width="195" height="40" />
         
         {/* First Floor Beams */}
-        <rect x="125" y="170" width="120" height="30" />
-        <rect x="275" y="170" width="120" height="30" />
+        <rect x="185" y="240" width="195" height="40" />
+        <rect x="425" y="240" width="195" height="40" />
         
         {/* Second Floor Beams */}
-        <rect x="125" y="20" width="120" height="30" />
-        <rect x="275" y="20" width="120" height="30" />
+        <rect x="185" y="80" width="195" height="40" />
+        <rect x="425" y="80" width="195" height="40" />
+        
+        {/* Third Floor Beams */}
+        <rect x="185" y="-80" width="195" height="40" />
+        <rect x="425" y="-80" width="195" height="40" />
       </g>
       
       {/* Diagonal Bracing - Animated */}
@@ -274,27 +312,88 @@ const StructuralDetailSVG = () => {
       {/* Dynamic Load Visualization */}
       <g>
         {/* Point Loads - Bouncing */}
-        <g stroke="#D64545" strokeWidth="4" fill="#D64545">
-          <line x1="110" y1="100" x2="110" y2="50">
-            <animate attributeName="y2" values="50;40;50" dur="2s" repeatCount="indefinite"/>
+        <g stroke="#D64545" strokeWidth="5" fill="#D64545">
+          {/* Third Floor Loads */}
+          <line x1="165" y1="-60" x2="165" y2="-120">
+            <animate attributeName="y2" values="-120;-140;-120" dur="2s" repeatCount="indefinite"/>
           </line>
-          <polygon points="110,50 105,60 115,60">
-            <animate attributeName="points" values="110,50 105,60 115,60;110,40 105,50 115,50;110,50 105,60 115,60" dur="2s" repeatCount="indefinite"/>
+          <polygon points="165,-120 160,-110 170,-110">
+            <animate attributeName="points" values="165,-120 160,-110 170,-110;165,-140 160,-130 170,-130;165,-120 160,-110 170,-110" dur="2s" repeatCount="indefinite"/>
           </polygon>
           
-          <line x1="260" y1="80" x2="260" y2="30">
-            <animate attributeName="y2" values="30;20;30" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+          <line x1="400" y1="-120" x2="400" y2="-180">
+            <animate attributeName="y2" values="-180;-200;-180" dur="2s" repeatCount="indefinite" begin="0.3s"/>
           </line>
-          <polygon points="260,30 255,40 265,40">
-            <animate attributeName="points" values="260,30 255,40 265,40;260,20 255,30 265,30;260,30 255,40 265,40" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+          <polygon points="400,-180 395,-170 405,-170">
+            <animate attributeName="points" values="400,-180 395,-170 405,-170;400,-200 395,-190 405,-190;400,-180 395,-170 405,-170" dur="2s" repeatCount="indefinite" begin="0.3s"/>
           </polygon>
           
-          <line x1="410" y1="100" x2="410" y2="50">
-            <animate attributeName="y2" values="50;40;50" dur="2s" repeatCount="indefinite" begin="1s"/>
+          <line x1="635" y1="-60" x2="635" y2="-120">
+            <animate attributeName="y2" values="-120;-140;-120" dur="2s" repeatCount="indefinite" begin="0.6s"/>
           </line>
-          <polygon points="410,50 405,60 415,60">
-            <animate attributeName="points" values="410,50 405,60 415,60;410,40 405,50 415,50;410,50 405,60 415,60" dur="2s" repeatCount="indefinite" begin="1s"/>
+          <polygon points="635,-120 630,-110 640,-110">
+            <animate attributeName="points" values="635,-120 630,-110 640,-110;635,-140 630,-130 640,-130;635,-120 630,-110 640,-110" dur="2s" repeatCount="indefinite" begin="0.6s"/>
           </polygon>
+          
+          {/* Second Floor Loads */}
+          <line x1="165" y1="100" x2="165" y2="40">
+            <animate attributeName="y2" values="40;20;40" dur="2.5s" repeatCount="indefinite" begin="0.2s"/>
+          </line>
+          <polygon points="165,40 160,50 170,50">
+            <animate attributeName="points" values="165,40 160,50 170,50;165,20 160,30 170,30;165,40 160,50 170,50" dur="2.5s" repeatCount="indefinite" begin="0.2s"/>
+          </polygon>
+          
+          <line x1="400" y1="40" x2="400" y2="-20">
+            <animate attributeName="y2" values="-20;-40;-20" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+          </line>
+          <polygon points="400,-20 395,-10 405,-10">
+            <animate attributeName="points" values="400,-20 395,-10 405,-10;400,-40 395,-30 405,-30;400,-20 395,-10 405,-10" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+          </polygon>
+          
+          <line x1="635" y1="100" x2="635" y2="40">
+            <animate attributeName="y2" values="40;20;40" dur="2.5s" repeatCount="indefinite" begin="0.8s"/>
+          </line>
+          <polygon points="635,40 630,50 640,50">
+            <animate attributeName="points" values="635,40 630,50 640,50;635,20 630,30 640,30;635,40 630,50 640,50" dur="2.5s" repeatCount="indefinite" begin="0.8s"/>
+          </polygon>
+          
+          {/* First Floor Loads */}
+          <line x1="165" y1="260" x2="165" y2="200">
+            <animate attributeName="y2" values="200;180;200" dur="3s" repeatCount="indefinite" begin="0.4s"/>
+          </line>
+          <polygon points="165,200 160,210 170,210">
+            <animate attributeName="points" values="165,200 160,210 170,210;165,180 160,190 170,190;165,200 160,210 170,210" dur="3s" repeatCount="indefinite" begin="0.4s"/>
+          </polygon>
+          
+          <line x1="400" y1="200" x2="400" y2="140">
+            <animate attributeName="y2" values="140;120;140" dur="3s" repeatCount="indefinite" begin="0.7s"/>
+          </line>
+          <polygon points="400,140 395,150 405,150">
+            <animate attributeName="points" values="400,140 395,150 405,150;400,120 395,130 405,130;400,140 395,150 405,150" dur="3s" repeatCount="indefinite" begin="0.7s"/>
+          </polygon>
+          
+          <line x1="635" y1="260" x2="635" y2="200">
+            <animate attributeName="y2" values="200;180;200" dur="3s" repeatCount="indefinite" begin="1s"/>
+          </line>
+          <polygon points="635,200 630,210 640,210">
+            <animate attributeName="points" values="635,200 630,210 640,210;635,180 630,190 640,190;635,200 630,210 640,210" dur="3s" repeatCount="indefinite" begin="1s"/>
+          </polygon>
+        </g>
+        
+        {/* Distributed Loads */}
+        <g stroke="#D64545" strokeWidth="3" fill="none" opacity="0.7">
+          <line x1="185" y1="-80" x2="380" y2="-80">
+            <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite"/>
+          </line>
+          <line x1="425" y1="-80" x2="620" y2="-80">
+            <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+          </line>
+          <line x1="185" y1="80" x2="380" y2="80">
+            <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite" begin="1s"/>
+          </line>
+          <line x1="425" y1="80" x2="620" y2="80">
+            <animate attributeName="stroke-width" values="3;5;3" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+          </line>
         </g>
         
         {/* Reaction Forces - Pulsing Upward */}
